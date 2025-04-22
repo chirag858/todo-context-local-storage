@@ -13,15 +13,7 @@ export const TodoContext = createContext({
     toggleComplete:(id)=>{}
 }); // creates storage box
 export const useTodo = () => {
-    return useContext(TodoContext)// let the component grab the data
+    return useContext(TodoContext)// a custom hook let the component grab the data
 };
 
-// export const TodoProvider = ({ children }) => {
-//     const [todos, setTodos] = useState([]);
-//     return ( // // provider fill the box with value ie data
-//         <TodoContext.Provider value={{ todos, setTodos }}>  
-//             {children}
-//         </TodoContext.Provider>
-//     )
-// }
-export const TodoProvider = TodoContext.Provider;
+export const TodoProvider = TodoContext.Provider; // TodoProvider
